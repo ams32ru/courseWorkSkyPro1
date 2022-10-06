@@ -71,7 +71,7 @@ public class Main {
         employee[5] = new Employee("Логинова Галина Васильевна", 3, 33852);
         employee[6] = new Employee("Рыбас Роман Владиславович ", 4, 78654);
         employee[7] = new Employee("Беляев Михаил Викторович", 4, 85642);
-        employee[8] = new Employee("Шутова Светлана Витальевна", 5, 55666);
+        employee[8] = new Employee("Шутова Марина Витальевна", 5, 55666);
         employee[9] = new Employee("Оленников Михаил Константинович", 5, 34568);
 
         printEmployee(employee);

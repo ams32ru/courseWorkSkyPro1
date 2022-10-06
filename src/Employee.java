@@ -31,7 +31,6 @@ public class Employee {
     public int getId() { return id; }
 
 
-
     public static int getIdCounter() {
         return idCounter;
     }
