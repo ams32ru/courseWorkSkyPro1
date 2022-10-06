@@ -58,7 +58,16 @@ public class Main {
             }
         }
         System.out.println("Максимальная зарплата: " + maxSalary + " рублей, у сотрудника " + maxSalaryEmployee);
+    }
 
+    public static void averageSalary(Employee[] employee) {
+        int averSalary = 0;
+        for (Employee sal :
+                employee) {
+            averSalary += sal.getSalary();
+        }
+        averSalary /= employee.length;
+        System.out.println("Среднее значение зарплат составила " + averSalary);
     }
 
 
@@ -79,6 +88,6 @@ public class Main {
         totalSalary(employee);
         minSalary(employee);
         maxSalary(employee);
-
+        averageSalary(employee);
     }
 }
