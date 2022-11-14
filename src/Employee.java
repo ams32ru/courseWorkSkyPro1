@@ -1,3 +1,6 @@
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
+
 import java.util.Objects;
 
 public class Employee {
@@ -12,7 +15,11 @@ public class Employee {
     }
 
     public Employee(String employeeName, int department, int salary) {
-        this.employeeName = employeeName;
+        if (StringUtils.isAnyEmpty(employeeName) || StringUtils.containsAny(employeeName, "1234567890")) {
+            throw new ExceptionBadRequest();
+        } else {
+            this.employeeName = WordUtils.capitalizeFully(employeeName, ' ');
+        }
         this.department = department;
         this.salary = salary;
         this.id = ++idCounter;
@@ -65,4 +72,9 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(employeeName, department, salary, id);
     }
+
+
+
+
+
 }
